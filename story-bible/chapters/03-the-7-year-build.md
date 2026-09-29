@@ -2,6 +2,21 @@
 
 ---
 
+## Chapter Title Styling
+
+| Element | Spec |
+|---|---|
+| **Display title** | THE 7-YEAR BUILD |
+| **Typeface** | Playfair Display, Bold, all-caps, letter-spacing +2px |
+| **Primary color** | Curaçao Yellow `#FFD700` on Deep Ocean Blue `#0A2342` |
+| **Accent underline** | Sunset Orange `#FF6B35`, 3px rule, 60% width, left-aligned |
+| **Kicker** | "CHAPTER THREE" — Helvetica Neue, uppercase, tracked wide, Tech Cyan `#00D4FF`, 14px |
+| **Subtitle** | "The years nobody claps for" — Playfair Display Light Italic, Coral White `#FFF5E6`, 18px |
+| **Drop cap** | Playfair Display Bold, Curaçao Yellow, 4 lines tall, Tech Cyan circuit-line flourish at base |
+| **Palette shift** | Baseline ratio (45/20/15/12/8) with blueprint linework in Tech Cyan |
+
+---
+
 ## Narrative
 
 Nobody claps for year one. Nobody claps for year three, either, or year five, if I'm honest about it. The seven years between "I can write code" and "people will pay me to think for their business" were mostly invisible — not because I was hiding, but because there simply wasn't an audience yet for work that hadn't proven itself. I learned early that credibility isn't announced. It's assembled, quietly, one delivered project at a time, usually while nobody outside the room is watching.

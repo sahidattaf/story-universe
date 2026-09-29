@@ -2,6 +2,21 @@
 
 ---
 
+## Chapter Title Styling
+
+| Element | Spec |
+|---|---|
+| **Display title** | THE GPT REVOLUTION |
+| **Typeface** | Playfair Display, Bold, all-caps, letter-spacing +2px |
+| **Primary color** | Curaçao Yellow `#FFD700` on Deep Ocean Blue `#0A2342` |
+| **Accent underline** | Sunset Orange `#FF6B35`, 3px rule, 60% width, left-aligned |
+| **Kicker** | "CHAPTER SIX" — Helvetica Neue, uppercase, tracked wide, Tech Cyan `#00D4FF`, 14px |
+| **Subtitle** | "Exporting the island's way of thinking" — Playfair Display Light Italic, Coral White `#FFF5E6`, 18px |
+| **Drop cap** | Playfair Display Bold, Curaçao Yellow, 4 lines tall, Tech Cyan circuit-line flourish at base |
+| **Palette shift** | "Build" mood board — Tech Cyan raised to ~15–18%; yellow reserved for breakthrough beats |
+
+---
+
 ## Narrative
 
 I built TriLinguaBot before I fully understood what I was actually solving for. On the surface, it was simple: a tool that moved fluently between English, Dutch, and Papiamentu, so a business on this island didn't have to choose which of its customers got a first-class experience and which got a rough translation and an apology. But underneath that, I was solving for something I'd felt my whole life — the exhausting tax of being fluent in three worlds and having almost none of the software built for any of them actually understand that. Every tool I'd ever used online assumed I'd pick a lane. I built TriLinguaBot because I refused to.

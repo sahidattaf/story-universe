@@ -67,6 +67,7 @@ Image: A single spotlight, camera lens flare, an audience just out of focus.
 Summary: He reconnects his personal-brand ambitions to the Attaf name and his family's real estate roots.
 Emotional beat: Breakthrough turning inward — success means nothing without lineage.
 Image: An old family photograph bleeding into a modern architectural rendering, same composition, two eras.
+Consistency note: The Attaf family's own real estate roots are confirmed (2026-09-28); family business: ATTAF REAL ESTATE. Sevier Attaf appears only as local inspiration (Ch 1, Ch 4), never as lineage.
 
 **Chapter 10 — The Dream Board**
 Summary: The private ritual — his daily dream board — becomes a public artifact others start building their own versions of.

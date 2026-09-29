@@ -142,7 +142,9 @@ Based on research and prior project data:
 | **Current Build** | Software 3.0 Transformation OS (S3T-001) |
 | **Repos** | sahidattaf/gpt-innovation-os |
 
-**Family Context:** The Attaf family has real estate roots in Curaçao (Sevier Attaf — Pa Bou Real Estate) . Sahid is building on that legacy, blending technology with hospitality and development.
+**Family Context:** The Attaf family has real estate roots in Curaçao (family business: ATTAF REAL ESTATE). Sahid is building on that legacy, blending technology with hospitality and development.
+
+> **Consistency note:** Sevier Attaf (Pa Bou Real Estate) is a local inspiration, not a family member. Verified 2026-09-28.
 
 ---
 

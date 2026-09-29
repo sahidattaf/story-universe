@@ -2,6 +2,21 @@
 
 ---
 
+## Chapter Title Styling
+
+| Element | Spec |
+|---|---|
+| **Display title** | THE SPARK |
+| **Typeface** | Playfair Display, Bold, all-caps, letter-spacing +2px |
+| **Primary color** | Curaçao Yellow `#FFD700` on Deep Ocean Blue `#0A2342` |
+| **Accent underline** | Sunset Orange `#FF6B35`, 3px rule, 60% width, left-aligned |
+| **Kicker** | "CHAPTER TWO" — Helvetica Neue, uppercase, tracked wide, Tech Cyan `#00D4FF`, 14px |
+| **Subtitle** | "Curiosity catching fire" — Playfair Display Light Italic, Coral White `#FFF5E6`, 18px |
+| **Drop cap** | Playfair Display Bold, Curaçao Yellow, 4 lines tall, Tech Cyan circuit-line flourish at base |
+| **Palette shift** | "Build" mood board — Tech Cyan raised to ~15–18%; yellow reserved for breakthrough beats |
+
+---
+
 ## Narrative
 
 The computer wasn't new. It wasn't even mine, not really — it belonged to the household, a secondhand tower somebody's cousin had brought back from Curaçao's endless network of who-knows-somebody, humming under a desk in the corner of a room that also held the ironing board and a stack of my school books. But the first night I turned it on and watched the screen flicker awake in the dark, something in me went quiet in the way it only goes quiet right before it goes loud.

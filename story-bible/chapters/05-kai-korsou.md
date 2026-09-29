@@ -2,6 +2,21 @@
 
 ---
 
+## Chapter Title Styling
+
+| Element | Spec |
+|---|---|
+| **Display title** | KAI KÒRSOU |
+| **Typeface** | Playfair Display, Bold, all-caps, letter-spacing +2px |
+| **Primary color** | Curaçao Yellow `#FFD700` on Deep Ocean Blue `#0A2342` |
+| **Accent underline** | Sunset Orange `#FF6B35`, 3px rule, 60% width, left-aligned |
+| **Kicker** | "CHAPTER FIVE" — Helvetica Neue, uppercase, tracked wide, Tech Cyan `#00D4FF`, 14px |
+| **Subtitle** | "120 hectares of horizon" — Playfair Display Light Italic, Coral White `#FFF5E6`, 18px |
+| **Drop cap** | Playfair Display Bold, Curaçao Yellow, 4 lines tall, Tech Cyan circuit-line flourish at base |
+| **Palette shift** | "Scale" mood board — full five-color balance, map-line textures at low opacity |
+
+---
+
 ## Narrative
 
 There's a story I heard long before I understood why it stuck to me — a real estate investor who, instead of asking "can I afford one house," asked "what if I bought the whole block?" I didn't grow up with the capital to think in blocks. I grew up on an island where most ambition, mine included, was sized to a single lot, a single building, a single Sunday's worth of dreaming. Kai Kòrsou is what happens when that ceiling finally breaks — not because the money arrived first, but because the thinking changed first, exactly the way it's supposed to.
