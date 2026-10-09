@@ -141,3 +141,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# MCP server configs containing API keys/tokens
+.vscode/mcp.json
