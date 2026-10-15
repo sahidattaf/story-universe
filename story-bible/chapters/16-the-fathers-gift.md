@@ -7,7 +7,7 @@ Position: Act V, Chapter 3 of 4 — The Next Generation
 Field	Value
 Chapter	16 — The Father's Gift
 Narrative Word Count	794 words
-Full File Word Count	~1,500 words
+Full File Word Count	2,917 words
 Image Prompts	5 (Midjourney/DALL-E)
 Video Script	9 min 15 sec (long) + 3 min 20 sec (short)
 Papiamentu Summary	Included

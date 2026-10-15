@@ -7,7 +7,7 @@ Position: Act V, Chapter 4 of 4 — The Last Chapter of Volume I
 Field	Value
 Chapter	17 — The Next 120 Hectares
 Narrative Word Count	743 words
-Full File Word Count	~1,440 words
+Full File Word Count	2,383 words
 Image Prompts	5 (Midjourney/DALL-E)
 Video Script	9 min 20 sec (long) + 3 min 40 sec (short)
 Papiamentu Summary	Included
