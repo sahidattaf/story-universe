@@ -60,22 +60,23 @@
 
   .hero__bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 35%;
+    z-index: 0;
   }
 
   .hero__overlay {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(10, 35, 66, 0.55) 0%,
-      rgba(10, 35, 66, 0.35) 45%,
-      rgba(10, 35, 66, 0.75) 100%
-    );
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 35, 66, 0.4);
+    z-index: 1;
   }
 
   .hero__content {
@@ -347,14 +348,34 @@
     margin-bottom: 1rem;
   }
 
-  footer a.mail {
-    color: var(--konfoki-yellow);
-    text-decoration: none;
-    font-weight: 500;
+  .footer-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
-  footer a.mail:hover {
-    text-decoration: underline;
+  .footer-btn {
+    display: inline-block;
+    min-width: 150px;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--konfoki-yellow);
+    color: var(--konfoki-yellow);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  .footer-btn:hover,
+  .footer-btn:focus-visible {
+    background: var(--konfoki-yellow);
+    color: var(--government-blue);
+    box-shadow: 0 8px 28px rgba(255, 215, 0, 0.25);
   }
 
   footer .divider {
@@ -408,7 +429,19 @@
 <body>
 
   <section class="hero">
-    <img class="hero__bg" src="assets/hero-coastline.png" alt="Curaçao coastline at sunrise, overlooking the Kai Kòrsou development">
+    <video class="hero__bg" autoplay loop muted playsinline preload="auto" poster="assets/hero-coastline.png" aria-hidden="true">
+      <source src="./assets/brand/drone-blue-bay.mp4" type="video/mp4">
+    </video>
+    <script>
+      // Some browsers ignore the autoplay attribute; request playback explicitly.
+      (function () {
+        var v = document.querySelector('.hero__bg');
+        if (!v) return;
+        v.muted = true;
+        var p = v.play();
+        if (p && p.catch) p.catch(function () {});
+      })();
+    </script>
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <span class="hero__eyebrow">Curaçao · 120 Hectares</span>
@@ -474,9 +507,12 @@
 
   <footer>
     <div class="footer-mark">KAI KÒRSOU</div>
-    <a class="mail" href="mailto:sahidattaf@gmail.com">sahidattaf@gmail.com</a>
+    <div class="footer-actions">
+      <a class="footer-btn" href="mailto:sahidattaf@gmail.com">Email Us</a>
+      <a class="footer-btn" href="https://wa.me/59995230683" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
     <div class="divider"></div>
-    <p class="copyright">© 2026 Kai Kòrsou. All rights reserved.</p>
+    <p class="copyright">© 2026 Kai Kòrsou by Attaf Group. All rights reserved.</p>
   </footer>
 
 </body>
