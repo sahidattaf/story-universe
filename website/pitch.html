@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kai Kòrsou — Pitch Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #0A2342;
+    --blue-deep: #061629;
+    --gold: #FFD700;
+    --gold-dim: #C9A92C;
+    --ink: #E8EAED;
+    --ink-dim: #9AA7BD;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    background: var(--blue-deep);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.01em;
+  }
+
+  .deck {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6vh 8vw;
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.65s cubic-bezier(.22,.61,.36,1), transform 0.65s cubic-bezier(.22,.61,.36,1);
+    background: radial-gradient(circle at 20% 15%, rgba(255,215,0,0.05), transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(255,215,0,0.04), transparent 50%),
+                var(--blue);
+  }
+
+  .slide.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+  }
+
+  .slide h1 {
+    font-weight: 700;
+    line-height: 1.05;
+    color: #fff;
+  }
+
+  .slide h2 {
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .headline-gold { color: var(--gold); }
+
+  .supporting {
+    margin-top: 1.75rem;
+    max-width: 680px;
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--ink-dim);
+    line-height: 1.7;
+  }
+
+  .divider {
+    width: 56px;
+    height: 2px;
+    background: var(--gold);
+    margin: 2rem auto 0;
+  }
+
+  /* ===== Slide 1 — Title ===== */
+  #slide-1 {
+    position: relative;
+    overflow: hidden;
+    background: var(--blue-deep);
+  }
+
+  #slide-1 .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(6,22,41,0.55) 0%, rgba(6,22,41,0.35) 40%, rgba(6,22,41,0.88) 100%);
+  }
+
+  #slide-1 .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #slide-1 h1 {
+    font-size: clamp(3.2rem, 8vw, 6.5rem);
+    letter-spacing: 0.06em;
+  }
+
+  #slide-1 .sub {
+    margin-top: 1.5rem;
+    font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+    font-weight: 300;
+    color: var(--ink);
+  }
+
+  #slide-1 .meta {
+    margin-top: 3rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold-dim);
+  }
+
+  /* ===== Slide 2 — Problem ===== */
+  #slide-2 h2 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  }
+
+  /* ===== Slide 3 — Vision ===== */
+  #slide-3 {
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0;
+  }
+
+  #slide-3 .vision-copy {
+    flex: 0 0 42%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6vh 5vw;
+  }
+
+  #slide-3 .vision-copy h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+  }
+
+  #slide-3 .stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+  }
+
+  #slide-3 .stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold);
+    font-weight: 700;
+    display: block;
+  }
+
+  #slide-3 .stat .label {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+  }
+
+  #slide-3 .vision-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #slide-3 .vision-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  #slide-3 .vision-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, var(--blue) 0%, rgba(10,35,66,0) 12%);
+  }
+
+  #slide-3 .caption {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.75rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    background: rgba(6,22,41,0.45);
+    padding: 0.4rem 0.8rem;
+    border-radius: 2px;
+    z-index: 1;
+  }
+
+  /* ===== Slide 4 / 5 / 6 — statement slides ===== */
+  .statement h2 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+  }
+
+  /* ===== Slide 5 — Team portraits ===== */
+  .portrait-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    margin-top: 3rem;
+    max-width: 880px;
+    width: 100%;
+  }
+
+  .portrait-frame {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border: 1.5px solid var(--gold-dim);
+    border-radius: 3px;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .portrait-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .portrait-fallback {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+    background: linear-gradient(160deg, rgba(255,215,0,0.09), rgba(10,35,66,0.5));
+  }
+
+  .portrait-cap {
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
+    color: var(--ink-dim);
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
+
+  #slide-6 .ask-cta {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    color: var(--gold);
+    letter-spacing: 0.04em;
+  }
+
+  /* ===== Chrome: counter, dots, nav ===== */
+  .chrome {
+    position: fixed;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .counter {
+    top: 2.2rem;
+    right: 2.6vw;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-dim);
+  }
+
+  .counter .cur { color: var(--gold); font-weight: 600; }
+
+  .brandmark {
+    top: 2.2rem;
+    left: 2.6vw;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: rgba(232,234,237,0.55);
+  }
+
+  .dots {
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.7rem;
+    pointer-events: auto;
+  }
+
+  .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    border: none;
+    padding: 0;
+  }
+
+  .dot.active {
+    background: var(--gold);
+    transform: scale(1.3);
+  }
+
+  .nav-arrow {
+    bottom: 1.9rem;
+    pointer-events: auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.03);
+    color: var(--ink);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
+  }
+
+  .nav-arrow:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(255,215,0,0.06);
+  }
+
+  .nav-prev { right: calc(50% + 90px); }
+  .nav-next { left: calc(50% + 90px); }
+
+  .hint {
+    bottom: 0.6rem;
+    right: 2.6vw;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(154,167,189,0.5);
+  }
+
+  @media (max-width: 760px) {
+    #slide-3 { flex-direction: column; }
+    #slide-3 .vision-copy { flex: 0 0 auto; padding: 5vh 6vw 3vh; }
+    #slide-3 .vision-image { flex: 1; }
+    #slide-3 .vision-image::after { display: none; }
+    .portrait-grid { grid-template-columns: repeat(2, 1fr); max-width: 320px; gap: 1.25rem; }
+    .nav-prev { right: auto; left: 1.2rem; }
+    .nav-next { left: auto; right: 1.2rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="deck">
+
+    <section class="slide active" id="slide-1">
+      <video autoplay loop muted playsinline src="./assets/brand/drone-blue-bay.mp4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;"></video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Curaçao · 120 Hectares</span>
+        <h1>KAI KÒRSOU</h1>
+        <p class="sub">The House of Curaçao</p>
+        <p class="meta">Investor &amp; Partnership Briefing</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-2">
+      <span class="eyebrow">01 — The Problem</span>
+      <h2>Importing <span class="headline-gold">our future.</span></h2>
+      <div class="divider"></div>
+      <p class="supporting">For generations, the island has imported its developers, its capital, and its ideas — watching coastline become someone else's vision. Curaçao builds the world's software. It rarely builds its own shore.</p>
+    </section>
+
+    <section class="slide" id="slide-3">
+      <div class="vision-copy">
+        <span class="eyebrow">02 — The Vision</span>
+        <h2>120 Hectares. 1,000m of beach. Next to Blue Bay.</h2>
+        <div class="stats">
+          <div class="stat">
+            <span class="num">120</span>
+            <span class="label">Hectares</span>
+          </div>
+          <div class="stat">
+            <span class="num">1,000m</span>
+            <span class="label">Beachfront</span>
+          </div>
+          <div class="stat">
+            <span class="num">40ha</span>
+            <span class="label">Left Wild</span>
+          </div>
+        </div>
+      </div>
+      <div class="vision-image">
+        <img src="assets/brand/piskadera-attaf-group.png" alt="Piskadera by Attaf Group — beach club render">
+        <span class="caption">Piskadera — by Attaf Group</span>
+      </div>
+    </section>
+
+    <section class="slide statement" id="slide-4">
+      <span class="eyebrow">03 — The Engine</span>
+      <h2>Software <span class="headline-gold">3.0.</span></h2>
+      <div class="divider"></div>
+      <p class="supporting">Not a construction company with a website. A coordinator, a set of agents, and a daily sync running permits, content, and community input — the same orchestration that built GPT Innovation now builds land.</p>
+    </section>
+
+    <section class="slide statement" id="slide-5">
+      <span class="eyebrow">04 — The Team</span>
+      <h2>Generational <span class="headline-gold">Legacy.</span></h2>
+      <div class="portrait-grid">
+        <div class="portrait-item">
+          <div class="portrait-frame">
+            <img src="assets/images/brand/sahid-portrait.png" alt="Sahid — The Architect" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback">S</div>
+          </div>
+          <p class="portrait-cap">Sahid — The Architect</p>
+        </div>
+        <div class="portrait-item">
+          <div class="portrait-frame">
+            <img src="assets/images/brand/sahid-father.png" alt="The Father — The Legacy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback">F</div>
+          </div>
+          <p class="portrait-cap">The Father — The Legacy</p>
+        </div>
+        <div class="portrait-item">
+          <div class="portrait-frame">
+            <img src="assets/images/brand/melissa.png" alt="Melissa — The Apprentice" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback">M</div>
+          </div>
+          <p class="portrait-cap">Melissa — The Apprentice</p>
+        </div>
+        <div class="portrait-item">
+          <div class="portrait-frame">
+            <img src="assets/images/brand/eren-and-zaiden.png" alt="Eren & Zaiden — The Next Gen" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="portrait-fallback">E+Z</div>
+          </div>
+          <p class="portrait-cap">Eren &amp; Zaiden — The Next Gen</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide statement" id="slide-6">
+      <span class="eyebrow">05 — The Ask</span>
+      <h2>Partnership <span class="headline-gold">&amp; Capital.</span></h2>
+      <div class="divider"></div>
+      <p class="supporting">We are raising development capital and seeking aligned partners for Phase 1 — Piskadera and the first 120 hectares. The next chapter of this island is being written now.</p>
+      <p class="ask-cta">hello@kaikorsou.com</p>
+    </section>
+
+  </div>
+
+  <div class="chrome brandmark">KAI KÒRSOU</div>
+  <div class="chrome counter"><span class="cur">01</span> / 06</div>
+  <button class="chrome nav-arrow nav-prev" aria-label="Previous slide">&#8592;</button>
+  <button class="chrome nav-arrow nav-next" aria-label="Next slide">&#8594;</button>
+  <div class="chrome dots">
+    <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+    <button class="dot" data-index="1" aria-label="Slide 2"></button>
+    <button class="dot" data-index="2" aria-label="Slide 3"></button>
+    <button class="dot" data-index="3" aria-label="Slide 4"></button>
+    <button class="dot" data-index="4" aria-label="Slide 5"></button>
+    <button class="dot" data-index="5" aria-label="Slide 6"></button>
+  </div>
+  <div class="chrome hint">&#8592; &#8594; or space to navigate</div>
+
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var dots = Array.prototype.slice.call(document.querySelectorAll('.dot'));
+  var counterCur = document.querySelector('.counter .cur');
+  var current = 0;
+
+  function render() {
+    slides.forEach(function (s, i) {
+      s.classList.toggle('active', i === current);
+    });
+    dots.forEach(function (d, i) {
+      d.classList.toggle('active', i === current);
+    });
+    counterCur.textContent = String(current + 1).padStart(2, '0');
+  }
+
+  function go(i) {
+    current = (i + slides.length) % slides.length;
+    render();
+  }
+
+  document.querySelector('.nav-next').addEventListener('click', function () { go(current + 1); });
+  document.querySelector('.nav-prev').addEventListener('click', function () { go(current - 1); });
+
+  dots.forEach(function (d) {
+    d.addEventListener('click', function () { go(parseInt(d.dataset.index, 10)); });
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(current + 1); }
+    if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(current - 1); }
+    if (e.key === 'Home') { go(0); }
+    if (e.key === 'End') { go(slides.length - 1); }
+  });
+
+  var touchStartX = null;
+  document.addEventListener('touchstart', function (e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (touchStartX === null) return;
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) { go(dx < 0 ? current + 1 : current - 1); }
+    touchStartX = null;
+  }, { passive: true });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
