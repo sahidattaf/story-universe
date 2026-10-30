@@ -288,6 +288,37 @@
     letter-spacing: 0.04em;
   }
 
+  #slide-6 .ask-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1.75rem;
+  }
+
+  #slide-6 .ask-btn {
+    display: inline-block;
+    min-width: 150px;
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  #slide-6 .ask-btn:hover,
+  #slide-6 .ask-btn:focus-visible {
+    background: var(--gold);
+    color: var(--blue);
+    box-shadow: 0 8px 28px rgba(255, 215, 0, 0.25);
+  }
+
   /* ===== Chrome: counter, dots, nav ===== */
   .chrome {
     position: fixed;
@@ -480,6 +511,10 @@
       <div class="divider"></div>
       <p class="supporting">We are raising development capital and seeking aligned partners for Phase 1 — Piskadera and the first 120 hectares. The next chapter of this island is being written now.</p>
       <p class="ask-cta">hello@kaikorsou.com</p>
+      <div class="ask-actions">
+        <a class="ask-btn" href="mailto:sahidattaf@gmail.com">Email Us</a>
+        <a class="ask-btn" href="https://wa.me/59995230683" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
     </section>
 
   </div>
